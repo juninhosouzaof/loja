@@ -25,7 +25,7 @@ include('menu.php')
         <label>Código do produto: </label><input type="text" name="codigoprod"><br><br>
         <label>Descrição: </label><input type="text" name="descricao"><br><br>
         <label>Fornecedor: </label><input type="text" name="fornecedor"><br><br>
-        <label>Preço unitário: </label><input type="text" name="precounitario"><br><br>
+        <label>Preço unitário: R$ </label><input type="text" name="precounitario"><br><br>
         <label>Quantidade (entrantes): </label><input type="text" name="quantentrada"><br><br>
         <label>Quantidade (saídos): </label><input type="text" name="quantsaida"><br><br>
         <label>Valor total (entrantes): R$ </label><input type="text" name="valorentrada"><br><br>

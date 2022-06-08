@@ -21,8 +21,8 @@
                 </summary>
                 <ul>
                     <li><a href="cadastrarprod.php">Cadastro de produtos</a></li>
-                    <li><a href="#">Visão geral do estoque</a></li>
-                    <li><a href="buscaprod.php">Pesquisa refinada</a></li>
+                    <li><a href="visaogeralprod.php">Visão geral do estoque</a></li>
+                    <li><a href="buscaprod.php">Pesquisa refinada de produtos</a></li>
                 </ul>
             </details>
 
@@ -32,8 +32,8 @@
                 </summary>
                 <ul>
                     <li><a href="cadastrarfunc.php">Cadastro de funcionários</a></li>
-                    <li><a href="#">Quadro de funcionários</a></li>
-                    <li><a href="buscafunc.php">Pesquisa refinada</a></li>
+                    <li><a href="visaogeralfunc.php">Quadro de funcionários</a></li>
+                    <li><a href="buscafunc.php">Pesquisa refinada de funcionários</a></li>
                 </ul>
             </details>
 
