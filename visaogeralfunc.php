@@ -65,13 +65,13 @@ include('menu.php')
             <td>$funcao</td>
             </tr>
 
-            <tr>
-            <td><a href='editarprod.php?codigoprod=".$dados['codigoprod']."'>Editar dados</a></td>
-            <td><a href='editarprod.php?codigoprod=".$dados['codigoprod']."'>Deletar dados</a></td>
-            </tr>
-
             </table>
             
+            <br>            
+            <a href='editarfunc.php?matricula=".$dados['matricula']."'>Editar dados</a> | 
+            <a href='deletarfunc.php?matricula=".$dados['matricula']."'>Deletar dados</a> <br>
+
+            <hr>
             ";
         }
 

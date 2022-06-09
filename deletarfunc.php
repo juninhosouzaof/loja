@@ -1,18 +1,22 @@
 <?php
 
-include('menu.php');
+include('menu.php');   
+include('conexaobanco.php');
 
-$matricula = $_POST['matricula'];
+$matricula = $_GET['matricula'];
 
-$sql = new mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = '$matricula'");
+$query = "DELETE FROM funcionario WHERE matricula = '$matricula'";
 
+    $exclusao = $conexaobanco -> query($query);
 
-        while ($dados = mysqli_fetch_array($sql)) {
-            $matricula = $dados['matricula'];
-            $nomefunc = $dados['nomefunc'];
-            $cpf = $dados['cpf'];
-            $funcao = $dados['funcao'];
-        }
+if ($exclusao) {
+    echo "Dados excluídos com sucesso. <br>
+    <a href='visaogeralfunc.php'>Voltar ao Quadro de Funcionários";
+} else {
+    echo "Erro ao excluir dados.
+    <a href='deletarfunc.php'>Tentar novamente | 
+    <a href='visaogeralfunc.php'>Voltar ao Quadro de Funcionários";
+}
 
 
 ?>

@@ -15,12 +15,12 @@ include('menu.php')
 ?>
     <!--TÍTULO DA PÁGINA-->
     <header>
-        <h1>Loja de Roupas - Cadastro de Produtos</h1>
+        <h1>Loja de Roupas - Cadastrar Novos Produtos</h1>
     </header>
     <hr>
     <br>
     <!--FORMULÁRIO DE CADASTRO DE PRODUTOS-->
-    <form action="cadastroprod2.php" method="post">
+    <form action="cadastrarprod2.php" method="post">
 
         <label>Código do produto: </label><input type="text" name="codigoprod"><br><br>
         <label>Descrição: </label><input type="text" name="descricao"><br><br>
