@@ -40,31 +40,43 @@ include('menu.php')
             $nomefunc = $dados['nomefunc'];
             $cpf = $dados['cpf'];
             $funcao = $dados['funcao'];
+            $escala = $dados['escala'];
+            $turno = $dados['turno'];
 
 
             echo "
             <table border='1'>
 
             <tr>
-            <td>MATRÍCULA</td>
+            <td>Matrícula</td>
             <td>$matricula</td>
             </tr>
-
+            
             <tr>
-            <td>NOME DO FUNCIONÁRIO</td>
+            <td>Nome</td>
             <td>$nomefunc</td>
             </tr>
-
+            
             <tr>
             <td>CPF</td>
             <td>$cpf</td>
             </tr>
-
+            
             <tr>
-            <td>FUNÇÃO</td>
+            <td>Função</td>
             <td>$funcao</td>
             </tr>
-
+            
+            <tr>
+            <td>Escala</td>
+            <td>$escala</td>
+            </tr>
+    
+            <tr>
+            <td>Turno</td>
+            <td>$turno</td>
+            </tr>
+    
             </table>
             
             <br>            

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loja de Roupas - Cadastro de Funcionários</title>
+    <title>Loja de Roupas - Cadastrar Funcionários</title>
 </head>
 
 <?php
@@ -22,10 +22,12 @@ include('menu.php')
     <!--FORMULÁRIO DE CADASTRO DE PRODUTOS-->
     <form action="cadastrarfunc2.php" method="post">
 
-        <label>Matrícula: </label><input type="text" name="matricula"><br><br>
-        <label>Nome do funcionário: </label><input type="text" name="nomefunc"><br><br>
-        <label>CPF: </label><input type="text" name="cpf"><br><br>
-        <label>Função: </label><input type="text" name="funcao"><br><br>
+        <label>Matrícula: </label><input type="text" name="matricula" required="required"><br><br>
+        <label>Nome do funcionário: </label><input type="text" name="nomefunc" required="required"><br><br>
+        <label>CPF: </label><input type="text" name="cpf" required="required"><br><br>
+        <label>Função: </label><input type="text" name="funcao" required="required"><br><br>
+        <label>Escala de trabalho: </label><input type="text" name="escala" required="required"><br><br>
+        <label>Turno de trabalho: </label><input type="text" name="turno" required="required"><br><br>
 
         <input type="submit" value="Cadastrar">
 

@@ -24,13 +24,75 @@ include('menu.php')
 
     <!--FORMULÁRIO DE BUSCA REFINADA-->
 
-    <form action="buscafunc2.php" method="post">
+    <form action="" method="post">
 
         <label>Matrícula: </label><input type="text" name="matricula">
 
         <input type="submit" value="Buscar">
 
     </form>
+
+
+<!--RESULTADO DA PESQUISA-->
+<hr>
+
+<?php
+
+include('conexaobanco.php');
+
+@$matricula = $_POST['matricula'];
+
+$sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = '$matricula'");
+
+    while ($dado = mysqli_fetch_array($sql)) {
+
+        $matricula = $dado['matricula'];
+        $nomefunc = $dado['nomefunc'];
+        $cpf = $dado['cpf'];
+        $funcao = $dado['funcao'];
+        $escala = $dado['escala'];
+        $turno = $dado['turno'];
+
+        echo "<table border='3'>
+
+        <tr>
+        <td>Matrícula</td>
+        <td>$matricula</td>
+        </tr>
+        
+        <tr>
+        <td>Nome</td>
+        <td>$nomefunc</td>
+        </tr>
+        
+        <tr>
+        <td>CPF</td>
+        <td>$cpf</td>
+        </tr>
+        
+        <tr>
+        <td>Função</td>
+        <td>$funcao</td>
+        </tr>
+        
+        <tr>
+        <td>Escala</td>
+        <td>$escala</td>
+        </tr>
+
+        <tr>
+        <td>Turno</td>
+        <td>$turno</td>
+        </tr>
+
+
+        </table>
+        
+        ";
+    }
+
+?>
+
 
         <!--RODAPÉ-->
         <br>

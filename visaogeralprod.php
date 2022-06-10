@@ -50,48 +50,43 @@ include('menu.php')
             <table border='1'>
 
             <tr>
-            <td>NOME</td>
+            <td>Nome</td>
             <td>$codigoprod</td>
             </tr>
-
+            
             <tr>
-            <td>DESCRIÇÃO</td>
+            <td>Descrição</td>
             <td>$descricao</td>
             </tr>
-
+            
             <tr>
-            <td>FORNECEDOR</td>
+            <td>Fornecedor</td>
             <td>$fornecedor</td>
             </tr>
-
+            
             <tr>
-            <td>PREÇO UNITÁRIO</td>
+            <td>Preço unitário</td>
             <td>$precounitario</td>
             </tr>
-
+            
             <tr>
-            <td>ENTRADA NO ESTOQUE (QTD)</td>
+            <td>Entrada no estoque (QTD)</td>
             <td>$quantentrada</td>
             </tr>
-
+            
             <tr>
-            <td>SAÍDA DO ESTOQUE (QTD)</td>
+            <td>Saída do estoque (QTD)</td>
             <td>$quantsaida</td>
             </tr>
-
+            
             <tr>
-            <td>ENTRADA NO ESTOQUE (R$)</td>
+            <td>Entrada no estoque (R$)</td>
             <td>$valorentrada</td>
             </tr>
-
+            
             <tr>
-            <td>SAÍDA DO ESTOQUE (R$)</td>
+            <td>Saída do estoque (R$)</td>
             <td>$valorsaida</td>
-            </tr>
-
-            <tr>
-            <td></td>
-            <td></td>
             </tr>
 
             </table>

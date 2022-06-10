@@ -16,7 +16,7 @@ include('menu.php');
 
         <!--TÍTULO DA PÁGINA-->
         <header>
-            <h1>Loja de Roupas - Home</h1>
+            <h1>Loja de Roupas - Início</h1>
         </header>
         <hr>
         <br>
