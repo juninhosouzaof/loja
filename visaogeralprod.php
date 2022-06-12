@@ -23,11 +23,30 @@ include('menu.php')
             <h1>Loja de Roupas - Visão Geral do Estoque</h1>
         </header>
         <hr>
-        <br>
-
     
+        <!--SEÇÃO DE BUSCA REFINADA EMBUTIDA NA VISÃO GERAL DO ESTOQUE-->
+        <header>
+        <h3>Loja de Roupas - Busca Refinada de Produtos</h3>
+        </header>
+        
+
+        <!--FORMULÁRIO DE BUSCA REFINADA-->
+
+        <form action="buscaprod.php" method="post">
+
+            <label>Código do produto: </label><input type="text" name="codigoprod">
+
+            <input type="submit" value="Buscar">
+
+        </form>
+
+        <br>
+        <hr>
     
     <!--CÓDIGO PHP - VISÃO GERAL DO ESTOQUE-->
+
+    <h3>Itens do estoque</h3>
+
     <?php
 
     include('conexaobanco.php');
@@ -50,42 +69,42 @@ include('menu.php')
             <table border='1'>
 
             <tr>
-            <td>Nome</td>
+            <td>CÓDIGO DO PRODUTO</td>
             <td>$codigoprod</td>
             </tr>
-            
+
             <tr>
-            <td>Descrição</td>
+            <td>DESCRIÇÃO</td>
             <td>$descricao</td>
             </tr>
-            
+
             <tr>
-            <td>Fornecedor</td>
+            <td>FORNECEDOR</td>
             <td>$fornecedor</td>
             </tr>
-            
+
             <tr>
-            <td>Preço unitário</td>
+            <td>PREÇO UNITÁRIO</td>
             <td>$precounitario</td>
             </tr>
-            
+
             <tr>
-            <td>Entrada no estoque (QTD)</td>
+            <td>ENTRADA NO ESTOQUE (QTD)</td>
             <td>$quantentrada</td>
             </tr>
-            
+
             <tr>
-            <td>Saída do estoque (QTD)</td>
+            <td>SAÍDA DO ESTOQUE (QTD)</td>
             <td>$quantsaida</td>
             </tr>
-            
+
             <tr>
-            <td>Entrada no estoque (R$)</td>
+            <td>ENTRADA NO ESTOQUE (R$)</td>
             <td>$valorentrada</td>
             </tr>
-            
+
             <tr>
-            <td>Saída do estoque (R$)</td>
+            <td>SAÍDA DO ESTOQUE (R$)</td>
             <td>$valorsaida</td>
             </tr>
 
@@ -94,9 +113,9 @@ include('menu.php')
                  
             <a href='editarprod.php?codigoprod=".$dados['codigoprod']."'>Editar dados</a> | 
             <a href='deletarprod.php?codigoprod=".$dados['codigoprod']."'>Deletar dados</a> <br>
-
+            
             <hr>
-            ";
+";
         }
 
     ?>

@@ -13,15 +13,14 @@
     <nav>
         <ul>
 
-            <li><a href="index.php">Início</a></li>
+            <li><a href="inicio.php">Início</a></li>
             <details>
                 <summary>
                     Estoque
                 </summary>
                 <ul>
-                    <li><a href="cadastrarprod.php">Cadastrar produtos</a></li>
+                    <li><a href="cadastrarprod.php">Cadastro de produtos</a></li>
                     <li><a href="visaogeralprod.php">Visão geral do estoque</a></li>
-                    <li><a href="buscaprod.php">Pesquisa refinada de produtos</a></li>
                 </ul>
             </details>
 
@@ -30,12 +29,11 @@
                     Funcionários
                 </summary>
                 <ul>
-                    <li><a href="cadastrarfunc.php">Cadastrar funcionários</a></li>
+                    <li><a href="cadastrarfunc.php">Cadastrar novo funcionário</a></li>
                     <li><a href="visaogeralfunc.php">Quadro de funcionários</a></li>
-                    <li><a href="buscafunc.php">Pesquisa refinada de funcionários</a></li>
                 </ul>
             </details>
-
+            <li><a href="encerrarsessao.php">Sair</a></li>
         </ul>
     </nav>
 

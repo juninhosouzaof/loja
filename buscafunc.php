@@ -5,101 +5,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Roupas - Busca Refinada de Funcionários</title>
+    <title>Loja de Roupas - Quadro de Funcionários - Resultado da busca</title>
 </head>
 
 
-<?php
+<body>
+    <!--MENU DA PÁGINA-->
+    <?php
 
-include('menu.php')
+    include('menu.php');
 
-?>
+    ?>
 
-    <!--TÍTULO DA PÁGINA-->
-    <header>
-        <h1>Loja de Roupas - Busca Refinada de Funcionários</h1>
-    </header>
-    <hr>
-    <br>
-
-    <!--FORMULÁRIO DE BUSCA REFINADA-->
-
-    <form action="" method="post">
-
-        <label>Matrícula: </label><input type="text" name="matricula">
-
-        <input type="submit" value="Buscar">
-
-    </form>
+        <!--TÍTULO DA PÁGINA-->
+        <header>
+            <h1>Loja de Roupas - Quadro de Funcionários</h1>
+        </header>
+        <hr>
 
 
-<!--RESULTADO DA PESQUISA-->
-<hr>
-
+<!--CÓDIGO PHP - AÇÃO DE BUSCA E RESULTADO DA BUSCA-->
 <?php
 
 include('conexaobanco.php');
 
-@$matricula = $_POST['matricula'];
+$matricula = $_POST['matricula'];
 
 $sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = '$matricula'");
 
-    while ($dado = mysqli_fetch_array($sql)) {
+    while ($dados = mysqli_fetch_array($sql)) {
 
-        $matricula = $dado['matricula'];
-        $nomefunc = $dado['nomefunc'];
-        $cpf = $dado['cpf'];
-        $funcao = $dado['funcao'];
-        $escala = $dado['escala'];
-        $turno = $dado['turno'];
+        $matricula = $dados['matricula'];
+        $nomefunc = $dados['nomefunc'];
+        $cpf = $dados['cpf'];
+        $funcao = $dados['funcao'];
 
-        echo "<table border='3'>
+        echo "
+
+
+        <!--TÍTULO DA PÁGINA-->
+        <header>
+            <h3>Busca Refinada de Funcionários</h3>
+        </header>
+    
+        <!--FORMULÁRIO DE BUSCA REFINADA-->
+    
+        <form action='buscafunc.php' method='post'>
+    
+            <label>Matrícula: </label><input type='text' name='matricula'>
+    
+            <input type='submit' value='Buscar'>
+    
+        </form>
+        
+        <br>
+        <hr>
+
+
+        <h3>Resultado da busca</h3>
+        
+        <table border='1'>
 
         <tr>
-        <td>Matrícula</td>
+        <td>MATRÍCULA</td>
         <td>$matricula</td>
         </tr>
-        
+
         <tr>
-        <td>Nome</td>
+        <td>NOME DO FUNCIONÁRIO</td>
         <td>$nomefunc</td>
         </tr>
-        
+
         <tr>
         <td>CPF</td>
         <td>$cpf</td>
         </tr>
-        
+
         <tr>
-        <td>Função</td>
+        <td>FUNÇÃO</td>
         <td>$funcao</td>
         </tr>
-        
-        <tr>
-        <td>Escala</td>
-        <td>$escala</td>
-        </tr>
-
-        <tr>
-        <td>Turno</td>
-        <td>$turno</td>
-        </tr>
-
 
         </table>
-        
-        ";
+        <br>";
+
+    echo "<a href='editarfunc.php?matricula=".$matricula."'>Editar dados de ".$nomefunc."?</a>";
+    echo " | ";
+    echo "<a href='predeletarfunc.php?matricula=".$dados['matricula']."'>Excluir dados de ".$nomefunc."?</a>";
+    echo "<hr>";
+    echo "<a href='visaogeralfunc.php'>Exibir o Quadro de Funcionários completo</a>";
     }
 
 ?>
 
-
-        <!--RODAPÉ-->
-        <br>
-    <hr>
-    <footer>
-        <p>UC MS Project - Curso Técnico em Informática - SENAC 2022</p>
-    </footer>
+            <!--RODAPÉ-->
+            <br>
+            <hr>
+            <footer>
+                <p>UC MS Project - Curso Técnico em Informática - SENAC 2022</p>
+            </footer>
+            
     </body>
 
 </html>

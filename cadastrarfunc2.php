@@ -6,9 +6,7 @@ $matricula = $_POST['matricula'];
 $nomefunc = $_POST['nomefunc'];
 $cpf = $_POST['cpf'];
 $funcao = $_POST['funcao'];
-$escala = $_POST['escala'];
-$turno = $_POST['turno'];
-
+$senha = $_POST['senha'];
 
 echo "<table border='3'>
 
@@ -33,31 +31,25 @@ echo "<table border='3'>
 </tr>
 
 <tr>
-<td>ESCALA</td>
-<td>$escala</td>
-</tr>
-
-<tr>
-<td>TURNO</td>
-<td>$turno</td>
+<td>SENHA</td>
+<td>$senha</td>
 </tr>
 
 </table>
 
 ";
 
-$adicionar = "INSERT INTO funcionario(matricula, nomefunc, cpf, funcao, escala, turno) VALUES('".$matricula."', '".$nomefunc."', '".$cpf."', '".$funcao."', '".$escala."', '".$turno."')";
+$adicionardados = "INSERT INTO funcionario(matricula, nomefunc, cpf, funcao, senha) VALUES('".$matricula."', '".$nomefunc."', '".$cpf."', '".$funcao."', '".$senha."')";
 
-    $inserir = mysqli_query($conexaobanco, $adicionar);
+    $inserirdados = mysqli_query($conexaobanco, $adicionardados);
 
-if ($inserir) {
+if ($inserirdados) {
     echo "<br>Os dados do funcionário ".$nomefunc." foram cadastrados com sucesso! <br>
-    <a href='cadastrarfunc.php'>Cadastrar outro funcionário</a><br>
-    <a href='visaogeralfunc.php'>Conferir o Quadro de Funcionários</a>";
+    <a href='cadastrarfunc.php'>Cadastrar outro funcionário</a> | 
+    <a href='visaogeralfunc.php'>Acessar ao Quadro de Funcionários</a>";
 } else {
-    echo "<br>Ocorreu um erro ao cadastrar dados. <br>
-    <a href='cadastrarfunc.php'>Tentar novamente</a><br>
-    <a href='visaogeralfunc.php'>Conferir o Quadro de Funcionários</a>";
+    echo "<br>Ocorreu um erro ao cadastrar dados
+    <a href='cadastrarfunc.php'>Tentar novamente</a>";
 }
 
 ?>

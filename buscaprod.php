@@ -17,99 +17,118 @@ include('menu.php')
 
     <!--TÍTULO DA PÁGINA-->
     <header>
-        <h1>Loja de Roupas - Busca Refinada de Produtos</h1>
+        <h1>Loja de Roupas - Visão Geral do Estoque</h1>
     </header>
     <hr>
     <br>
 
-    <!--FORMULÁRIO DE BUSCA REFINADA-->
-
-    <form action="" method="post">
-
-        <label>Código do produto: </label><input type="text" name="codigoprod">
-
-        <input type="submit" value="Buscar">
-
-<!--RESULTADO DA PESQUISA-->
-<hr>
-
+<!--CÓDIGO PHP - AÇÃO DE BUSCA E RESULTADO DA BUSCA-->
 <?php
 
 include('conexaobanco.php');
 
-@$codigoprod = $_POST['codigoprod'];
+$codigoprod = $_POST['codigoprod'];
 
 $sql = mysqli_query($conexaobanco, "SELECT * FROM estoque WHERE codigoprod = '$codigoprod'");
 
-    while ($dado = mysqli_fetch_array($sql)) {
+    while ($dados = mysqli_fetch_array($sql)) {
 
-        $codigoprod = $dado['codigoprod'];
-        $descricao = $dado['descricao'];
-        $fornecedor = $dado['fornecedor'];
-        $precounitario = $dado['precounitario'];
-        $quantentrada = $dado['quantentrada'];
-        $quantsaida = $dado['quantsaida'];
-        $valorentrada = $dado['valorentrada'];
-        $valorsaida = $dado['valorsaida'];
+        $codigoprod = $dados['codigoprod'];
+        $descricao = $dados['descricao'];
+        $fornecedor = $dados['fornecedor'];
+        $precounitario = $dados['precounitario'];
+        $quantentrada = $dados['quantentrada'];
+        $quantsaida = $dados['quantsaida'];
+        $valorentrada = $dados['valorentrada'];
+        $valorsaida = $dados['valorsaida'];
 
-        echo "<table border='3'>
-
-        <tr>
-        <td>Cód. do produto</td>
-        <td>$codigoprod</td>
-        </tr>
+        echo "
         
-        <tr>
-        <td>Descrição</td>
-        <td>$descricao</td>
-        </tr>
+        <!--SEÇÃO DE BUSCA REFINADA EMBUTIDA NA VISÃO GERAL DO ESTOQUE-->
+        <header>
+        <h3>Busca Refinada de Produtos</h3>
+        </header>
         
-        <tr>
-        <td>Fornecedor</td>
-        <td>$fornecedor</td>
-        </tr>
+
+        <!--FORMULÁRIO DE BUSCA REFINADA-->
+
+        <form action='buscaprod.php' method='post'>
+
+            <label>Código do produto: </label><input type='text' name='codigoprod'>
+
+            <input type='submit' value='Buscar'>
+
+        </form>
+
+        <br>
+        <hr>
+
+        <h3>Resultado da busca</h3>
+
+        <table border='1'>
+
+            <tr>
+            <td>CÓDIGO DO PRODUTO</td>
+            <td>$codigoprod</td>
+            </tr>
+
+            <tr>
+            <td>DESCRIÇÃO</td>
+            <td>$descricao</td>
+            </tr>
+
+            <tr>
+            <td>FORNECEDOR</td>
+            <td>$fornecedor</td>
+            </tr>
+
+            <tr>
+            <td>PREÇO UNITÁRIO</td>
+            <td>$precounitario</td>
+            </tr>
+
+            <tr>
+            <td>ENTRADA NO ESTOQUE (QTD)</td>
+            <td>$quantentrada</td>
+            </tr>
+
+            <tr>
+            <td>SAÍDA DO ESTOQUE (QTD)</td>
+            <td>$quantsaida</td>
+            </tr>
+
+            <tr>
+            <td>ENTRADA NO ESTOQUE (R$)</td>
+            <td>$valorentrada</td>
+            </tr>
+
+            <tr>
+            <td>SAÍDA DO ESTOQUE (R$)</td>
+            <td>$valorsaida</td>
+            </tr>
+
+            </table>
+                 
+            <a href='editarprod.php?codigoprod=".$dados['codigoprod']."'>Editar dados</a> | 
+            <a href='deletarprod.php?codigoprod=".$dados['codigoprod']."'>Deletar dados</a> <br>
+
+            <hr>
         
-        <tr>
-        <td>Preço unitário</td>
-        <td>$precounitario</td>
-        </tr>
-        
-        <tr>
-        <td>Entrada (QTD)</td>
-        <td>$quantentrada</td>
-        </tr>
-
-        <tr>
-        <td>Saída (QTD)</td>
-        <td>$quantsaida</td>
-        </tr>
-
-        <tr>
-        <td>Entrada (R$)</td>
-        <td>$valorentrada</td>
-        </tr>
-
-        <tr>
-        <td>Saída (R$)</td>
-        <td>$valorsaida</td>
-        </tr>
-
-        </table>
-        
+            <a href='visaogeralprod.php'>Voltar à Visão Geral do Estoque</a> <br>
+            
         ";
     }
+
 
 ?>
 
 
-    </form>
-
         <!--RODAPÉ-->
         <br>
-    <hr>
-    <footer>
-        <p>UC MS Project - Curso Técnico em Informática - SENAC 2022</p>
-    </footer>
+        <hr>
+        <footer>
+            <p>UC MS Project - Curso Técnico em Informática - SENAC 2022</p>
+        </footer>
 
     </body>
 

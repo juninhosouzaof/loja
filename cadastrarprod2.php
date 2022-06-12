@@ -15,42 +15,42 @@ echo "
 <table border='1'>
 
 <tr>
-<td>Nome</td>
+<td>NOME</td>
 <td>$codigoprod</td>
 </tr>
 
 <tr>
-<td>Descrição</td>
+<td>DESCRIÇÃO</td>
 <td>$descricao</td>
 </tr>
 
 <tr>
-<td>Fornecedor</td>
+<td>FORNECEDOR</td>
 <td>$fornecedor</td>
 </tr>
 
 <tr>
-<td>Preço unitário</td>
+<td>PREÇO UNITÁRIO</td>
 <td>$precounitario</td>
 </tr>
 
 <tr>
-<td>Entrada no estoque (QTD)</td>
+<td>ENTRADA NO ESTOQUE (QTD)</td>
 <td>$quantentrada</td>
 </tr>
 
 <tr>
-<td>Saída do estoque (QTD)</td>
+<td>SAÍDA DO ESTOQUE (QTD)</td>
 <td>$quantsaida</td>
 </tr>
 
 <tr>
-<td>Entrada no estoque (R$)</td>
+<td>ENTRADA NO ESTOQUE (R$)</td>
 <td>$valorentrada</td>
 </tr>
 
 <tr>
-<td>Saída do estoque (R$)</td>
+<td>SAÍDA DO ESTOQUE (R$)</td>
 <td>$valorsaida</td>
 </tr>
 
@@ -68,8 +68,9 @@ $adicionar = "INSERT INTO estoque(codigoprod, descricao, fornecedor, precounitar
     $inserir = mysqli_query($conexaobanco, $adicionar);
 
 if ($inserir) {
-    echo "<br>Os dados do produto ".$descricao." foram cadastrados com sucesso!
-    <a href='cadastrarprod.php'>Cadastrar outro produto</a>";
+    echo "<br>Os dados do produto ".$descricao." foram cadastrados com sucesso! <br>
+    <a href='cadastrarprod.php'>Cadastrar outro produto</a> | 
+    <a href='visaogeralprod.php'>Voltar à Visão Geral do Estoque</a>";
 } else {
     echo "<br>Ocorreu um erro ao cadastrar dados
     <a href='cadastrarprod.php'>Tentar novamente</a>";

@@ -18,16 +18,35 @@ include('menu.php')
 ?>
 
 
-        <!--TÍTULO DA PÁGINA-->
+        <!--TÍTULO DA PÁGINA PRINCIPAL-->
         <header>
             <h1>Loja de Roupas - Quadro de Funcionários</h1>
         </header>
         <hr>
-        <br>
 
+
+    <!--SEÇÃO DE BUSCA REFINADA EMBUTIDA NO QUADRO GERAL DE FUNCIONÁRIOS-->
+    <header>
+        <h3>Busca Refinada de Funcionários</h3>
+    </header>
+
+    <!--FORMULÁRIO DE BUSCA REFINADA-->
+
+    <form action="buscafunc.php" method="post">
+
+        <label>Matrícula: </label><input type="text" name="matricula">
+
+        <input type="submit" value="Buscar">
+
+    </form>
     
-    
+    <br>
+    <hr>
+
     <!--CÓDIGO PHP - VISÃO GERAL DO ESTOQUE-->
+
+    <h3>Lista de funcionários</h3>
+
     <?php
 
     include('conexaobanco.php');
@@ -40,48 +59,36 @@ include('menu.php')
             $nomefunc = $dados['nomefunc'];
             $cpf = $dados['cpf'];
             $funcao = $dados['funcao'];
-            $escala = $dados['escala'];
-            $turno = $dados['turno'];
 
 
             echo "
             <table border='1'>
 
             <tr>
-            <td>Matrícula</td>
+            <td>MATRÍCULA</td>
             <td>$matricula</td>
             </tr>
-            
+
             <tr>
-            <td>Nome</td>
+            <td>NOME DO FUNCIONÁRIO</td>
             <td>$nomefunc</td>
             </tr>
-            
+
             <tr>
             <td>CPF</td>
             <td>$cpf</td>
             </tr>
-            
+
             <tr>
-            <td>Função</td>
+            <td>FUNÇÃO</td>
             <td>$funcao</td>
             </tr>
-            
-            <tr>
-            <td>Escala</td>
-            <td>$escala</td>
-            </tr>
-    
-            <tr>
-            <td>Turno</td>
-            <td>$turno</td>
-            </tr>
-    
+
             </table>
             
             <br>            
             <a href='editarfunc.php?matricula=".$dados['matricula']."'>Editar dados</a> | 
-            <a href='deletarfunc.php?matricula=".$dados['matricula']."'>Deletar dados</a> <br>
+            <a href='predeletarfunc.php?matricula=".$dados['matricula']."'>Deletar dados</a> <br>
 
             <hr>
             ";
