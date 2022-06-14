@@ -12,24 +12,35 @@
 
     <!--TÍTULO DA PÁGINA-->
     <header>
-        <h1>Login - Loja de Roupas</h1>
+        <h1>Loja de Roupas</h1>
     </header>
     <hr>
     <br>
 
     <!--FORMULÁRIO DE LOGIN-->
     <fieldset>
+        
+        <legend>LOGIN</legend>
+        
+            <form action="abrirsessao.php" method="post">
 
-        <form action="abrirsessao.php" method="post">
+                <label>Matrícula: </label><input type="text" name="matricula" required="required">
+                
+                <br>
+                
+                <label>Senha: </label><input type="password" name="senha" required="required">
+                
+                <br>
+                <br>
+                
+                <input type="submit" value="Entrar">
+                
+                <br>
+                <br>
 
-            <label>Matrícula: </label><input type="text" name="matricula" required="required">
-            <br>
-            <label>Senha: </label><input type="password" name="senha" required="required">
-            <br>
-            <br>
-            <input type="submit" value="Entrar">
+                <a href="criaracessoinicial.php">Ainda não tenho cadastro</a>
 
-        </form>
+            </form>
 
     </fieldset>
 

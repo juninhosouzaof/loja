@@ -28,6 +28,8 @@ $matricula = $_POST['matricula'];
 $nomefunc = $_POST['nomefunc'];
 $cpf = $_POST['cpf'];
 $funcao = $_POST['funcao'];
+$escala = $_POST['escala'];
+$turno = $_POST['turno'];
 $senha = $_POST['senha'];
 
 $sql = mysqli_query($conexaobanco, "UPDATE funcionario SET nomefunc = '$nomefunc' WHERE matricula = '$matricula'");
@@ -36,7 +38,11 @@ $sql2 = mysqli_query($conexaobanco, "UPDATE funcionario SET cpf = '$cpf' WHERE m
 
 $sql3 = mysqli_query($conexaobanco, "UPDATE funcionario SET funcao = '$funcao' WHERE matricula = '$matricula'");
 
-$sql4 = mysqli_query($conexaobanco, "UPDATE funcionario SET senha = '$senha' WHERE matricula = '$matricula'");
+$sql4 = mysqli_query($conexaobanco, "UPDATE funcionario SET escala = '$escala' WHERE matricula = '$matricula'");
+
+$sql5 = mysqli_query($conexaobanco, "UPDATE funcionario SET turno = '$turno' WHERE matricula = '$matricula'");
+
+$sql6 = mysqli_query($conexaobanco, "UPDATE funcionario SET senha = '$senha' WHERE matricula = '$matricula'");
 
     if ($sql) {
         echo "Os dados do(a) funcionário(a) ".$nomefunc." foram alterados com sucesso! <br><a href='visaogeralfunc.php'>Voltar à Lista Geral de Colaboradores</a>";

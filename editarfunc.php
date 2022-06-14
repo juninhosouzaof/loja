@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,6 @@ include('menu.php');
 include('conexaobanco.php');
 
 
-
 $matricula = $_GET['matricula'];
 
 $sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = '$matricula'");
@@ -37,12 +36,8 @@ $dado = mysqli_fetch_array($sql);
 
         echo "
 
-        <form action='editarfunc2.php' method='post'>
-
-    <table>
-        <tr>
-            <form>
-
+            <form action='editarfunc2.php' method='post'>
+            
                 <table>
 
                     <tr>
@@ -79,19 +74,39 @@ $dado = mysqli_fetch_array($sql);
                         <td>
                             <input type='text' name='funcao' value=".$dado['funcao'].">
                         </td>
+                    </tr>
 
-                        <tr>
-                            <td>
-                                <label>SENHA</label>
-                            </td>
-                            <td>
-                                <input type='password' name='senha' value=".$dado['senha'].">
-                            </td>
+                    <tr>
+                        <td>
+                            <label>ESCALA</label>
+                        </td>
+                        <td>
+                            <input type='text' name='escala' value=".$dado['escala'].">
+                        </td>
                         </tr>
 
-                        <td><input type='submit' href='editarfunc2.php' value='Editar'></button>
-
+                    <tr>
+                        <td>
+                            <label>TURNO</label>
                         </td>
+                        <td>
+                            <input type='text' name='turno' value=".$dado['turno'].">
+                        </td>
+                        </tr>
+
+                    <tr>
+                        <td>
+                            <label>SENHA</label>
+                        </td>
+                        <td>
+                            <input type='password' name='senha' value=".$dado['senha'].">
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td><input type='submit' href='editarfunc2.php' value='Editar'></button></td>
+                    </tr>
 
                 </table>
 

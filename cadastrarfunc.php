@@ -8,37 +8,43 @@
     <title>Loja de Roupas - Cadastro de Funcionários</title>
 </head>
 
-<?php
+    <body>
 
-include('menu.php')
-
-?>
-    <!--TÍTULO DA PÁGINA-->
-    <header>
-        <h1>Loja de Roupas - Cadastrar Novos Funcionários</h1>
-    </header>
-    <hr>
-    <br>
-    <!--FORMULÁRIO DE CADASTRO DE PRODUTOS-->
-    <form action="cadastrarfunc2.php" method="post">
-
-        <label>Matrícula: </label><input type="text" name="matricula" required="required"><br><br>
-        <label>Nome do funcionário: </label><input type="text" name="nomefunc" required="required"><br><br>
-        <label>CPF: </label><input type="text" name="cpf" required="required"><br><br>
-        <label>Função: </label><input type="text" name="funcao" required="required"><br><br>
-        <label>Nova senha: </label><input type="password" name="senha" required="required"><br><br>
-
-        <input type="submit" value="Cadastrar">
-
-    </form>
+        <?php
+        include('menu.php');
+        ?>
 
 
-    <!--RODAPÉ-->
-    <br>
-    <hr>
-    <footer>
-        <p>UC MS Project - Curso Técnico em Informática - SENAC 2022</p>
-    </footer>
+        <!--TÍTULO DA PÁGINA-->
+        <header>
+            <h1>Loja de Roupas - Cadastrar Novos Funcionários</h1>
+        </header>
+        <hr>
+        <br>
+
+
+                    <!--FORMULÁRIO DE CADASTRO DE PRODUTOS-->
+                    <form action="cadastrarfunc2.php" method="post">
+
+                        <label>Matrícula: </label><input type="text" name="matricula" required="required"><br><br>
+                        <label>Nome do funcionário: </label><input type="text" name="nomefunc" required="required"><br><br>
+                        <label>CPF: </label><input type="text" name="cpf" required="required"><br><br>
+                        <label>Função: </label><input type="text" name="funcao" required="required"><br><br>
+                        <label>Escala: </label><input type="text" name="escala" required="required"><br><br>
+                        <label>Turno: </label><input type="text" name="turno" required="required"><br><br>
+                        <label>Nova senha: </label><input type="password" name="senha" required="required"><br><br>
+
+                        <input type="submit" value="Cadastrar">
+
+                    </form>
+
+
+        <!--RODAPÉ-->
+        <br>
+        <hr>
+        <footer>
+            <p>UC MS Project - Curso Técnico em Informática - SENAC 2022</p>
+        </footer>
 
     </body>
 

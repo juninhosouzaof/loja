@@ -39,6 +39,8 @@ $sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = 
         $nomefunc = $dados['nomefunc'];
         $cpf = $dados['cpf'];
         $funcao = $dados['funcao'];
+        $escala = $dados['escala'];
+        $turno = $dados['turno'];
 
         echo "
 
@@ -62,32 +64,42 @@ $sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = 
         <hr>
 
 
-        <h3>Resultado da busca</h3>
-        
-        <table border='1'>
+            <h3>Resultado da busca</h3>
+            
+                <table border='1'>
 
-        <tr>
-        <td>MATRÍCULA</td>
-        <td>$matricula</td>
-        </tr>
+                    <tr>
+                    <td>MATRÍCULA</td>
+                    <td>$matricula</td>
+                    </tr>
 
-        <tr>
-        <td>NOME DO FUNCIONÁRIO</td>
-        <td>$nomefunc</td>
-        </tr>
+                    <tr>
+                    <td>NOME DO FUNCIONÁRIO</td>
+                    <td>$nomefunc</td>
+                    </tr>
 
-        <tr>
-        <td>CPF</td>
-        <td>$cpf</td>
-        </tr>
+                    <tr>
+                    <td>CPF</td>
+                    <td>$cpf</td>
+                    </tr>
 
-        <tr>
-        <td>FUNÇÃO</td>
-        <td>$funcao</td>
-        </tr>
+                    <tr>
+                    <td>FUNÇÃO</td>
+                    <td>$funcao</td>
+                    </tr>
 
-        </table>
-        <br>";
+                    <tr>
+                    <td>FUNÇÃO</td>
+                    <td>$escala</td>
+                    </tr>
+
+                    <tr>
+                    <td>FUNÇÃO</td>
+                    <td>$turno</td>
+                    </tr>
+
+                </table>
+            <br>";
 
     echo "<a href='editarfunc.php?matricula=".$matricula."'>Editar dados de ".$nomefunc."?</a>";
     echo " | ";

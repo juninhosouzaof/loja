@@ -1,3 +1,4 @@
+
 <?php
 include('menu.php');
 include('conexaobanco.php');
@@ -6,10 +7,11 @@ $matricula = $_POST['matricula'];
 $nomefunc = $_POST['nomefunc'];
 $cpf = $_POST['cpf'];
 $funcao = $_POST['funcao'];
+$escala = $_POST['escala'];
+$turno = $_POST['turno'];
 $senha = $_POST['senha'];
 
 echo "<table border='3'>
-
 <tr>
 <td>MATRÍCULA</td>
 <td>$matricula</td>
@@ -31,12 +33,20 @@ echo "<table border='3'>
 </tr>
 
 <tr>
+<td>ESCALA</td>
+<td>$escala</td>
+</tr>
+
+<tr>
+<td>TURNO</td>
+<td>$turno</td>
+</tr>
+
+<tr>
 <td>SENHA</td>
 <td>$senha</td>
 </tr>
-
 </table>
-
 ";
 
 $adicionardados = "INSERT INTO funcionario(matricula, nomefunc, cpf, funcao, senha) VALUES('".$matricula."', '".$nomefunc."', '".$cpf."', '".$funcao."', '".$senha."')";

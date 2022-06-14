@@ -27,7 +27,7 @@ include('conexaobanco.php');
 
 @$matricula = $_POST['matricula'];
 
-$sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario");
+$sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = '$matricula'");
 
 while ($dados = mysqli_fetch_array($sql)) {
 

@@ -13,7 +13,7 @@
 <!--MENU DA PÁGINA-->
 <?php
 
-include('menu.php')
+include('menu.php');
 
 ?>
 
