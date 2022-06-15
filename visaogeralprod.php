@@ -10,9 +10,8 @@
 
 <body>
 
-<!--MENU DA PÁGINA-->
+<!--MENU DO SITE-->
 <?php
-
 include('menu.php');
 
 ?>

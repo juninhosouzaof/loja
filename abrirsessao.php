@@ -2,8 +2,8 @@
 
 session_start();
 
-$matricula = $_POST['matricula'];
-$senha = $_POST['senha'];
+@$matricula = $_POST['matricula'];
+@$senha = $_POST['senha'];
 
     include('conexaobanco.php');
 
@@ -14,15 +14,23 @@ $senha = $_POST['senha'];
                 $_SESSION['senha'] = $senha;
 
                 header('location: inicio.php');
+
             
             } else {
 
                 unset($_SESSION['matricula']);
                 unset($_SESSION['senha']);
     
-                echo "Login ou senha inválidos.
-                <br>
-                <a href='index.php'>Tentar novamente</a>";
+                echo "
+                        <br>
+
+                        <fieldset>
+                            <b>Login ou senha inválidos.</b>
+                            <br>
+                            <a href='index.php'>Tentar novamente</a>
+                        </fieldset>
+                
+                    ";
             }
 
 ?>

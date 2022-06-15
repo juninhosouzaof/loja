@@ -19,15 +19,22 @@
 
 
                 <!--FORMULÁRIO DE CADASTRO DE DADOS PARA O PRIMEIRO ACESSO-->    
+                
+                <br>
+                        
+                        <fieldset>
+                            <legend><b>Regras para gerar as primeiras credenciais de acesso ao sistema</b></legend>
+                                <p><b><i>1 - A matrícula deve ser em valor numérico e é um valor definitivo. Ou seja, não é possível mais alterar o respectivo dado. Essa característica é aplicável somente à matrícula. Os demais dados podem ser alterados.</p>
+                                <p>2 - É recomendada a utilização de uma senha segura que envolva números, alternância de letras maiúsculas e minúsculas e caracteres especiais.</i></b></p>
+                        </fieldset>
+
+                    <br>
+                
                 <form action="criaracessoinicial2.php" method="post">
 
                     <fieldset>
 
-                        <legend>GERAR CREDENCIAIS PARA PRIMEIRO ACESSO NO SISTEMA</legend>
-
-                        <br>
-
-                        <label>Matrícula: </label><input type="text" name="matricula" required="required"><br><br>
+                        <label>Matrícula: </label><input type="number" name="matricula" required="required"><br><br>
                         <label>Nova senha: </label><input type="password" name="senha" required="required"><br><br>
 
                         <input type="submit" value="Gerar acesso">

@@ -8,9 +8,10 @@
 </head>
 <body>
 
-<!--MENU DA PÁGINA-->
+<!--MENU DO SITE-->
 <?php
 include('menu.php');
+
 ?>
 
         <!--TÍTULO DA PÁGINA-->

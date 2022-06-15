@@ -10,9 +10,8 @@
 
 <body>
 
-<!--MENU DA PÁGINA-->
+<!--MENU DO SITE-->
 <?php
-
 include('menu.php');
 
 ?>
@@ -34,7 +33,7 @@ include('menu.php');
 
     <form action="buscafunc.php" method="post">
 
-        <label>Matrícula: </label><input type="text" name="matricula">
+        <label>Matrícula: </label><input type="number" name="matricula">
 
         <input type="submit" value="Buscar">
 
@@ -68,32 +67,32 @@ include('menu.php');
 
                     <tr>
                     <td>MATRÍCULA</td>
-                    <td>$matricula</td>
+                    <td><b>$matricula</b></td>
                     </tr>
 
                     <tr>
                     <td>NOME DO FUNCIONÁRIO</td>
-                    <td>$nomefunc</td>
+                    <td><b>$nomefunc</b></td>
                     </tr>
 
                     <tr>
                     <td>CPF</td>
-                    <td>$cpf</td>
+                    <td><b>$cpf</b></td>
                     </tr>
 
                     <tr>
                     <td>FUNÇÃO</td>
-                    <td>$funcao</td>
+                    <td><b>$funcao</b></td>
                     </tr>
 
                     <tr>
                     <td>ESCALA</td>
-                    <td>$escala</td>
+                    <td><b>$escala</b></td>
                     </tr>
 
                     <tr>
                     <td>TURNO</td>
-                    <td>$turno</td>
+                    <td><b>$turno</b></td>
                     </tr>
 
                 </table>

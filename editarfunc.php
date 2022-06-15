@@ -8,9 +8,10 @@
 </head>
 <body>
 
-<!--MENU DA PÁGINA-->
+<!--MENU DO SITE-->
 <?php
 include('menu.php');
+
 ?>
 
 <!--TÍTULO DA PÁGINA-->
@@ -45,7 +46,7 @@ $dado = mysqli_fetch_array($sql);
                             <label>MATRÍCULA</label>
                         </td>
                         <td>
-                            <input type='text' name='matricula' value='".$dado['matricula']."'>
+                            <input type='text' name='matricula' value='".$dado['matricula']."' readonly>
                         </td>
                     </tr>
 

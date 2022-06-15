@@ -3,6 +3,7 @@
 include('menu.php');   
 include('conexaobanco.php');
 
+
 $matricula = $_GET['matricula'];
 
 $query = "DELETE FROM funcionario WHERE matricula = '$matricula'";

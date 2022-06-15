@@ -12,6 +12,7 @@
 
         <?php
         include('menu.php');
+
         ?>
 
 
@@ -26,7 +27,7 @@
                     <!--FORMULÁRIO DE CADASTRO DE PRODUTOS-->
                     <form action="cadastrarfunc2.php" method="post">
 
-                        <label>Matrícula: </label><input type="text" name="matricula" required="required"><br><br>
+                        <label>Matrícula: </label><input type="number" name="matricula" required="required"><br><br>
                         <label>Nome do funcionário: </label><input type="text" name="nomefunc" required="required"><br><br>
                         <label>CPF: </label><input type="text" name="cpf" required="required"><br><br>
                         <label>Função: </label><input type="text" name="funcao" required="required"><br><br>

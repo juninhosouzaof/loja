@@ -3,6 +3,7 @@
 include('menu.php');   
 include('conexaobanco.php');
 
+
 $codigoprod = $_GET['codigoprod'];
 
 $query = "DELETE FROM estoque WHERE codigoprod = '$codigoprod'";

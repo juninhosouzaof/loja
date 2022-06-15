@@ -12,7 +12,6 @@
 <body>
     <!--MENU DA PÁGINA-->
     <?php
-
     include('menu.php');
 
     ?>
@@ -32,6 +31,7 @@ include('conexaobanco.php');
 $matricula = $_POST['matricula'];
 
 $sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = '$matricula'");
+
 
     while ($dados = mysqli_fetch_array($sql)) {
 
@@ -70,32 +70,32 @@ $sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = 
 
                     <tr>
                     <td>MATRÍCULA</td>
-                    <td>$matricula</td>
+                    <td><b>$matricula</b></td>
                     </tr>
 
                     <tr>
                     <td>NOME DO FUNCIONÁRIO</td>
-                    <td>$nomefunc</td>
+                    <td><b>$nomefunc</b></td>
                     </tr>
 
                     <tr>
                     <td>CPF</td>
-                    <td>$cpf</td>
+                    <td><b>$cpf</b></td>
                     </tr>
 
                     <tr>
                     <td>FUNÇÃO</td>
-                    <td>$funcao</td>
+                    <td><b>$funcao</b></td>
                     </tr>
 
                     <tr>
-                    <td>FUNÇÃO</td>
-                    <td>$escala</td>
+                    <td>ESCALA</td>
+                    <td><b>$escala</b></td>
                     </tr>
 
                     <tr>
-                    <td>FUNÇÃO</td>
-                    <td>$turno</td>
+                    <td>TURNO</td>
+                    <td><b>$turno</b></td>
                     </tr>
 
                 </table>

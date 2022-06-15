@@ -2,6 +2,7 @@
 include('menu.php');
 include('conexaobanco.php');
 
+
 $codigoprod = $_POST['codigoprod'];
 $descricao = $_POST['descricao'];
 $fornecedor = $_POST['fornecedor'];

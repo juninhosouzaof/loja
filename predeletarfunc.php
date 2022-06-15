@@ -11,7 +11,7 @@
 <?php
 
 include('menu.php');   
-
+include('logado.php');
 ?>
 
 <!--TÍTULO DA PÁGINA-->
@@ -25,7 +25,7 @@ include('menu.php');
 
 include('conexaobanco.php');
 
-@$matricula = $_POST['matricula'];
+@$matricula = $_GET['matricula'];
 
 $sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = '$matricula'");
 

@@ -8,17 +8,21 @@
     <title>Loja de Roupas - Cadastro de Produtos</title>
 </head>
 
+<!--MENU DO SITE-->
 <?php
-
 include('menu.php');
 
 ?>
+
+
     <!--TÍTULO DA PÁGINA-->
     <header>
         <h1>Loja de Roupas - Cadastrar Novos Produtos</h1>
     </header>
     <hr>
     <br>
+
+
     <!--FORMULÁRIO DE CADASTRO DE PRODUTOS-->
     <form action="cadastrarprod2.php" method="post">
 

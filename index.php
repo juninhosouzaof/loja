@@ -20,7 +20,7 @@
     <!--FORMULÁRIO DE LOGIN-->
     <fieldset>
         
-        <legend>LOGIN</legend>
+        <legend><b>LOGIN DO FUNCIONÁRIO</b></legend>
         
             <form action="abrirsessao.php" method="post">
 
@@ -43,8 +43,6 @@
             </form>
 
     </fieldset>
-
-
 
 
     <!--RODAPÉ-->

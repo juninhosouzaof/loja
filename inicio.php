@@ -10,7 +10,9 @@
 
 <body>
 
-    <?php
+
+<!--MENU DO SITE-->
+<?php
 include('menu.php');
 ?>
 
@@ -20,6 +22,8 @@ include('menu.php');
         </header>
         <hr>
         <br>
+
+
 
         <!--CONTEÚDO DA PÁGINA - TABELA DE OPÇÕES-->
 
