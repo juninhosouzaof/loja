@@ -19,7 +19,7 @@
                     Estoque
                 </summary>
                 <ul>
-                    <li><a href="cadastrarprod.php">Cadastro de produtos</a></li>
+                    <li><a href="cadastrarprod.php">Cadastrar novo produto</a></li>
                     <li><a href="visaogeralprod.php">Visão geral do estoque</a></li>
                 </ul>
             </details>
@@ -30,7 +30,7 @@
                 </summary>
                 <ul>
                     <li><a href="cadastrarfunc.php">Cadastrar novo funcionário</a></li>
-                    <li><a href="visaogeralfunc.php">Quadro de funcionários</a></li>
+                    <li><a href="visaogeralfunc.php">Quadro geral de funcionários</a></li>
                 </ul>
             </details>
             <li><a href="encerrarsessao.php">Sair</a></li>

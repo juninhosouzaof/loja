@@ -111,7 +111,7 @@ include('menu.php');
             
                  
             <a href='editarprod.php?codigoprod=".$dados['codigoprod']."'>Editar dados</a> | 
-            <a href='deletarprod.php?codigoprod=".$dados['codigoprod']."'>Deletar dados</a> <br>
+            <a href='predeletarprod.php?codigoprod=".$dados['codigoprod']."'>Deletar dados</a> <br>
             
             <hr>
 ";

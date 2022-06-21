@@ -103,7 +103,7 @@ $sql = mysqli_query($conexaobanco, "SELECT * FROM funcionario WHERE matricula = 
 
     echo "<a href='editarfunc.php?matricula=".$matricula."'>Editar dados de ".$nomefunc."?</a>";
     echo " | ";
-    echo "<a href='predeletarfunc.php?matricula=".$dados['matricula']."'>Excluir dados de ".$nomefunc."?</a>";
+    echo "<a href='deletarfunc.php?matricula=".$dados['matricula']."'>Excluir dados de ".$nomefunc."?</a>";
     echo "<hr>";
     echo "<a href='visaogeralfunc.php'>Exibir o Quadro de Funcionários completo</a>";
     }

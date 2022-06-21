@@ -37,7 +37,7 @@ include('menu.php');
                 </td>
             </tr>
             <tr>
-                <td><a href="cadastrarprod.php">Cadastro de produtos</a></td>
+                <td><a href="cadastrarprod.php">Cadastrar novo produto</a></td>
             </tr>
             <tr>
                 <td><a href="visaogeralprod.php">Visão geral do estoque</a></td>
@@ -55,7 +55,7 @@ include('menu.php');
                 </td>
             </tr>
             <tr>
-                <td><a href="cadastrarfunc.php">Cadastro de funcionários</a></td>
+                <td><a href="cadastrarfunc.php">Cadastrar novo funcionário</a></td>
             </tr>
             <tr>
                 <td><a href="visaogeralfunc.php">Quadro de funcionários</a></td>

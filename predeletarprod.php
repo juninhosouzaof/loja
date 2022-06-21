@@ -25,13 +25,13 @@ include('menu.php');
 
 include('conexaobanco.php');
 
-@$codigoprod = $_POST['codigoprod'];
+@$codigoprod = $_GET['codigoprod'];
 
-$sql = mysqli_query($conexaobanco, "SELECT * FROM estoque");
+$sql = mysqli_query($conexaobanco, "SELECT * FROM estoque WHERE codigoprod = '$codigoprod'");
 
 while ($dados = mysqli_fetch_array($sql)) {
 
-    $matricula = $dados['codigoprod'];
+    $codigoprod = $dados['codigoprod'];
     $descricao = $dados['descricao'];
 
     echo "
