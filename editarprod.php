@@ -119,7 +119,7 @@ $dado = mysqli_fetch_array($sql);
                         </td>
                         </tr>
 
-                        <td><input type='submit' href='editarfunc2.php' value='Editar'></button>
+                        <td><input type='submit' href='editarprod2.php' value='Salvar alterações'></button>
 
                         </td>
 
