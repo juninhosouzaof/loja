@@ -31,9 +31,6 @@ include('menu.php');
         <label>Fornecedor: </label><input type="text" name="fornecedor" required="required"><br><br>
         <label>Preço unitário: R$ </label><input type="text" name="precounitario" required="required"><br><br>
         <label>Quantidade (entrantes): </label><input type="text" name="quantentrada" required="required"><br><br>
-        <label>Quantidade (saídos): </label><input type="text" name="quantsaida" required="required"><br><br>
-        <label>Valor total (entrantes): R$ </label><input type="text" name="valorentrada" required="required"><br><br>
-        <label>Valor total (saídos): R$ </label><input type="text" name="valorsaida" required="required"><br><br>
 
         <input type="submit" value="Cadastrar">
 

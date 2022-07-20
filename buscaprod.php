@@ -38,8 +38,8 @@ $sql = mysqli_query($conexaobanco, "SELECT * FROM estoque WHERE codigoprod = '$c
         $precounitario = $dados['precounitario'];
         $quantentrada = $dados['quantentrada'];
         $quantsaida = $dados['quantsaida'];
-        $valorentrada = $dados['valorentrada'];
-        $valorsaida = $dados['valorsaida'];
+        $valorentrada = ($precounitario * $quantentrada)
+        $valorsaida = ($precounitario * $quantsaida)
 
         echo "
         

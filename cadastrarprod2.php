@@ -8,9 +8,7 @@ $descricao = $_POST['descricao'];
 $fornecedor = $_POST['fornecedor'];
 $precounitario = $_POST['precounitario'];
 $quantentrada = $_POST['quantentrada'];
-$quantsaida = $_POST['quantsaida'];
-$valorentrada = $_POST['valorentrada'];
-$valorsaida = $_POST['valorsaida'];
+$valorentrada = ($precounitario * $quantentrada)
 
 echo "
 <table border='1'>
@@ -41,18 +39,8 @@ echo "
 </tr>
 
 <tr>
-<td>SAÍDA DO ESTOQUE (QTD)</td>
-<td>$quantsaida</td>
-</tr>
-
-<tr>
 <td>ENTRADA NO ESTOQUE (R$)</td>
 <td>$valorentrada</td>
-</tr>
-
-<tr>
-<td>SAÍDA DO ESTOQUE (R$)</td>
-<td>$valorsaida</td>
 </tr>
 
 <tr>
